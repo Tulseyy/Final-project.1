@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #b18aec;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e78cdc;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="date"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Task List Styles */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s, border-color 0.3s;
+}
+
+#task-list li:hover {
+    transform: scale(1.03);
+    border-color: #f0dd9e;
+}
+
+#task-list button {
+    margin-left: 0.5rem;
+    background-color: #b894e3;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#task-list button.edit-btn {
+    background-color: #4cca48;
+}
+
+#task-list button:hover {
+    opacity: 0.8;
+}
+
+/* Color Coding */
+.task-color-coding {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+.task-color-coding label {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Theme Toggle */
+.dark-mode {
+    background-color: #000000;
+    color: #ef8e8e;
+}
+
+.dark-mode .app {
+    background-color: #dfbda3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode input[type="text"], 
+.dark-mode input[type="date"] {
+    background-color: #feffff;
+    color: #97d7dd;
+    border-color: #781010;
+}
+
+.dark-mode button {
+    background-color: #000000;
+}
+
+.dark-mode button:hover {
+    background-color: #e073c3;
+}
+
+.dark-mode #task-list li {
+    background-color: #060303;
+    color: #ffffff;
+}
+
+/* Animations */
+.animated {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
